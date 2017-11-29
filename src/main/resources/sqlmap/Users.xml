@@ -34,7 +34,5 @@
     </update>
     <select id="findUserList" parameterType="pojo.User" resultType="pojo.User">
         SELECT * FROM user WHERE 1=1 AND id
-
     </select>
-
 </mapper>
