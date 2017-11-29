@@ -32,7 +32,7 @@
         SET username = #{username}, birthday = #{birthday}, address = #{address}, sex = #{sex}
         WHERE id = #{id}
     </update>
-    <select id="findUserList" parameterType="user" resultType="user">
+    <select id="findUserList" parameterType="pojo.User" resultType="pojo.User">
         SELECT * FROM user WHERE 1=1 AND id
     </select>
 
