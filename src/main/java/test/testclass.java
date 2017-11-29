@@ -101,5 +101,6 @@ public class testclass {
         }
         System.out.println(userById);
         sqlSession.close();
+        System.out.println("github");
     }
 }
