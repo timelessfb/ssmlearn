@@ -33,4 +33,16 @@
         WHERE id = #{id}
     </update>
 
+    <select id="findUserList" parameterType="pojo.User" resultType="pojo.User">
+        SELECT * FROM user
+        <where>
+            <if test="sex!=null and sex!=''">
+                AND sex=#{sex}
+            </if>
+            <if test="username!=null and username!=''">
+                AND username LIKE '%${username}%'
+            </if>
+        </where>
+    </select>
+
 </mapper>

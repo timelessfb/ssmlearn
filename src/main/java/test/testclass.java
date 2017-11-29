@@ -101,6 +101,21 @@ public class testclass {
         }
         System.out.println(userById);
         sqlSession.close();
-        System.out.println("github");
+    }
+
+    @Test
+    public void test1() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserDao mapper = sqlSession.getMapper(UserDao.class);
+        User user = new User();
+        user.setUsername("三");
+        user.setSex("1");
+        try {
+            List<User> userList = mapper.findUserList(user);
+            System.out.println(userList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        sqlSession.close();
     }
 }

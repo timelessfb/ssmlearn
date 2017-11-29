@@ -10,4 +10,6 @@ public interface UserDao {
     public List<User> findUserByUserName(String username) throws Exception;
 
     public void insertUser(User user) throws Exception;
+
+    public List<User> findUserList(User user) throws Exception;
 }
