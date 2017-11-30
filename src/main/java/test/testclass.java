@@ -1,13 +1,16 @@
 package test;
 
+import dao.OrderDao;
 import dao.UserDao;
+import dao.UserOrderDao;
+import dao.o2mDao;
 import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.reflection.SystemMetaObject;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Before;
 import org.junit.Test;
+import pojo.Orders;
 import pojo.User;
 
 import java.io.InputStream;
@@ -118,4 +121,45 @@ public class testclass {
         }
         sqlSession.close();
     }
+
+
+    @Test
+    public void test2() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        OrderDao mapper = sqlSession.getMapper(OrderDao.class);
+        try {
+            Orders orderById = mapper.findOrderById(3);
+            System.out.println(orderById);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        sqlSession.close();
+    }
+
+    @Test
+    public void test3() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserOrderDao mapper = sqlSession.getMapper(UserOrderDao.class);
+        try {
+            List<Orders> orderList = mapper.findOrderList();
+            System.out.println(orderList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        sqlSession.close();
+    }
+
+    @Test
+    public void test4() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        o2mDao mapper = sqlSession.getMapper(o2mDao.class);
+        try {
+            List<User> allUserWithOrders = mapper.findAllUserWithOrders();
+            System.out.println(allUserWithOrders);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        sqlSession.close();
+    }
+
 }

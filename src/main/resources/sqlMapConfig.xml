@@ -15,12 +15,11 @@
         </environment>
     </environments>
 
-    <!--<plugins>-->
-    <!--<plugin interceptor=""></plugin>-->
-    <!--</plugins>-->
-
     <mappers>
         <mapper resource="sqlmap/UserMapper.xml"/>
         <mapper resource="sqlmap/Users.xml"/>
+        <mapper resource="sqlmap/OrderMapper.xml"/>
+        <mapper resource="sqlmap/UserOrderMapper.xml"></mapper>
+        <mapper resource="sqlmap/o2mMapper.xml"></mapper>
     </mappers>
 </configuration>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.o2mDao">
+    <resultMap id="User2UO" type="pojo.User">
+        <id column="id" property="id"></id>
+        <result column="username" property="username"></result>
+        <result column="birthday" property="birthday"></result>
+        <result column="sex" property="sex"></result>
+        <result column="address" property="address"></result>
+        <collection property="orders" ofType="pojo.Orders">
+            <result column="number" property="number"></result>
+            <result column="mybatis.orders.createtime" property="createtime"></result>
+            <result column="mybatis.orders.note" property="note"></result>
+        </collection>
+    </resultMap>
+    <select id="findAllUserWithOrders" resultMap="User2UO">
+        SELECT
+            user.*,
+            orders.number,
+            orders.createtime,
+            orders.note
+        FROM user
+            INNER JOIN orders ON user.id = orders.user_id
+    </select>
+</mapper>

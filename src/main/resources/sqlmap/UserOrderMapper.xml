@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserOrderDao">
+    <resultMap id="userOrderResultMap" type="pojo.Orders">
+        <id column="id" property="id"></id>
+        <result column="user_id" property="user_id"></result>
+        <result column="number" property="number"></result>
+        <result column="createtime" property="createtime"></result>
+        <result column="note" property="note"></result>
+        <association javaType="pojo.User" property="user">
+            <id column="user_id" property="id"></id>
+            <result column="username" property="username"></result>
+            <result column="address" property="address"></result>
+        </association>
+    </resultMap>
+    <select id="findOrderList" resultMap="userOrderResultMap">
+        SELECT
+            orders.*,
+            user.username,
+            user.address
+        FROM orders
+            INNER JOIN user ON orders.user_id = user.id
+    </select>
+
+
+</mapper>
