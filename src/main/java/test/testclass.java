@@ -112,7 +112,7 @@ public class testclass {
         UserDao mapper = sqlSession.getMapper(UserDao.class);
         User user = new User();
         user.setUsername("三");
-        user.setSex("1");
+//        user.setSex("1");
         try {
             List<User> userList = mapper.findUserList(user);
             System.out.println(userList);
