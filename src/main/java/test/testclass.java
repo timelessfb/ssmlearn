@@ -1,11 +1,9 @@
 package test;
 
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-import edu.uestc.ssm.mapper.OrdersMapper;
-import edu.uestc.ssm.po.Orders;
+import edu.uestc.mybatis.mapper.OrdersMapper;
+import edu.uestc.mybatis.po.Orders;
 import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.reflection.SystemMetaObject;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
