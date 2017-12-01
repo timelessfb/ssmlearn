@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <!--加载数据库登陆信息属性-->
-    <properties resource="MysqlInfo.properties"></properties>
+    <properties resource="MysqlInfo.properties"/>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -22,10 +22,6 @@
     </environments>
 
     <mappers>
-        <mapper resource="sqlmap/UserMapper.xml"/>
-        <mapper resource="sqlmap/Users.xml"/>
-        <mapper resource="sqlmap/OrderMapper.xml"/>
-        <mapper resource="sqlmap/UserOrderMapper.xml"></mapper>
-        <mapper resource="sqlmap/o2mMapper.xml"></mapper>
+        <package name="edu.uestc.ssm.mapper"/>
     </mappers>
 </configuration>
