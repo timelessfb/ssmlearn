@@ -162,4 +162,17 @@ public class testclass {
         sqlSession.close();
     }
 
+    @Test
+    public void test5() {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        o2mDao mapper = sqlSession.getMapper(o2mDao.class);
+        try {
+            List<User> allUserWithOrders = mapper.findAllUserWithOrders();
+            System.out.println(allUserWithOrders);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        sqlSession.close();
+    }
+
 }
