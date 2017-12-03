@@ -3,41 +3,41 @@ package test;
 
 import edu.uestc.mybatis.mapper.OrdersMapper;
 import edu.uestc.mybatis.po.Orders;
+import edu.uestc.service.CDPlayer;
+import edu.uestc.service.UserService;
+import edu.uestc.service.UserServiceImpl;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.InputStream;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = ServerConfig.class)
 public class testclass {
-    private SqlSessionFactory sqlSessionFactory;
 
-    @Before
-    public void createsqlSessionFactory() throws Exception {
-        String resource = "sqlMapConfig.xml";
-        InputStream inputStream = Resources.getResourceAsStream(resource);
-        sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-    }
-
+    @Autowired
+    CDPlayer cdPlayer;
 
     @Test
-    public void test5() {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        OrdersMapper mapper = sqlSession.getMapper(OrdersMapper.class);
+    public void test6() {
+//        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+
         try {
-            Orders orders = mapper.selectByPrimaryKey(3);
-            System.out.println("================");
-            System.out.println(orders.getNumber());
-            System.out.println("================");
-            sqlSession.commit();
+            cdPlayer.callfun();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            sqlSession.close();
         }
     }
 
 }
+
+

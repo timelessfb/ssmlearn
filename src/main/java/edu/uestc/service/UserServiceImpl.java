@@ -1,9 +1,14 @@
 package edu.uestc.service;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
-import edu.uestc.mybatis.mapper.UserMapper;
+import java.util.Properties;
 
-public class UserServiceImpl implements UserService{
+
+@Component
+public class UserServiceImpl implements UserService {
+
     public void findUserById(Integer id) throws Exception {
-        System.out.println(id);
+        System.out.println("hello world");
     }
 }
