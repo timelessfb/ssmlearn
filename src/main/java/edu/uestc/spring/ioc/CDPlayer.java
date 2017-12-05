@@ -1,4 +1,4 @@
-package edu.uestc.service;
+package edu.uestc.spring.ioc;
 
 public class CDPlayer {
     CompactDisc compactDisc;

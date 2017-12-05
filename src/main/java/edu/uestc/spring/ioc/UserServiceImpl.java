@@ -1,8 +1,5 @@
-package edu.uestc.service;
-import org.springframework.context.annotation.ComponentScan;
+package edu.uestc.spring.ioc;
 import org.springframework.stereotype.Component;
-
-import java.util.Properties;
 
 
 @Component

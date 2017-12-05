@@ -1,6 +1,6 @@
-package edu.uestc.service;
+package edu.uestc.spring.ioc;
 
-public class SgtPeppers implements CompactDisc{
+public class SgtPeppers implements CompactDisc {
 
     Integer age;
 

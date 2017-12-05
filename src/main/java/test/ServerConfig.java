@@ -1,6 +1,9 @@
 package test;
 
-import edu.uestc.service.*;
+
+import edu.uestc.spring.ioc.CDPlayer;
+import edu.uestc.spring.ioc.CompactDisc;
+import edu.uestc.spring.ioc.SgtPeppers;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
