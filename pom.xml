@@ -13,7 +13,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- spring版本号 -->
-        <spring.version>5.0.1.RELEASE</spring.version>
+        <spring.version>5.0.2.RELEASE</spring.version>
 
         <!-- mybatis版本号 -->
         <mybatis.version>3.4.5</mybatis.version>
@@ -35,7 +35,12 @@
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
     </repositories>
-
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
 
@@ -97,6 +102,17 @@
             <version>4.0.8.RELEASE</version>
         </dependency>
 
+        <!--配置spring支持web应用的组件-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
         <!--配置mybatis-->
         <dependency>
             <groupId>org.mybatis</groupId>
