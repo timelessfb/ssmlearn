@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1>Welcome to Homepage</h1>
-<a href="www.baidu.com">点我点我</a>
+<a href="https://www.baidu.com">点我点我</a>
 </body>
 </html>

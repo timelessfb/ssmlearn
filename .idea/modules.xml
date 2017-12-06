@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ssmlearn.iml" filepath="$PROJECT_DIR$/ssmlearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-learn.iml" filepath="$PROJECT_DIR$/ssm-learn.iml" />
     </modules>
   </component>
 </project>

@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="ssmlearn:war exploded">
+  <artifact type="exploded-war" name="ssm-learn:war exploded">
     <output-path>$PROJECT_DIR$/target/ssm-learn</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="ssmlearn" />
+          <element id="module-output" name="ssm-learn" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax:javaee-web-api:7.0" />
@@ -32,7 +32,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/ssm-learn/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="ssmlearn/web/Web" />
+      <element id="javaee-facet-resources" facet="ssm-learn/web/Web" />
     </root>
   </artifact>
 </component>
