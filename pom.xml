@@ -169,6 +169,6 @@
                 </includes>
             </resource>
         </resources>
-        <finalName>ssm-learn</finalName>
+        <finalName>ssmm</finalName>
     </build>
 </project>

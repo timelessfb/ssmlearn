@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="ed5ba51c-c7fa-4b63-a50c-e70a850a01cb" name="vps" url="http://104.224.150.143">
-        <fileTransfer host="104.224.150.143" port="29576" rootFolder="/root/apache-tomcat-7.0.82/webapps" accessType="SFTP">
+        <fileTransfer host="104.224.150.143" port="29576" rootFolder="/root" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
